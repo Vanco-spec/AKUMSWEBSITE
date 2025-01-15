@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-  "start": "http-server -p 8080",
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "dev": "vite",
-  "build": "vite build",
-  "serve": "vite preview"
-},
+    "start": "http-server -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
   "keywords": [
     "AKUMS"
   ],
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "http-server": "^14.1.1",
-    "vite": "^6.0.7"
+    "vite": "^4.0.0"
   },
   "description": "Welcome to the official website of the **Association of Kenyatta University Medical Students (AKUMS)**. This website serves as a platform for connecting student doctors, sharing resources, and promoting collaboration within the medical community.",
   "repository": {
