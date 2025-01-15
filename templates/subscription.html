@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+
+    <style>
+        /* Navbar */
+        .navbar {
+            background-color: #fff ;
+            color:  #000;
+            height: 35px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: #fff;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #bbb;
+        }
+
+        .navbar span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .subscription {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .subscription-plan {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            justify-content: space-between; /* Distribute space between elements */
+            align-items: center; /* Center-align all content horizontally */
+            border: 2px solid #ddd;
+            border-radius: 12px; /* Rounded corners for a classic feel */
+            padding: 2rem;
+            width: 320px; /* Larger size */
+            background: linear-gradient(145deg, #f7f7f7, #e1e1e1); /* Subtle gradient background */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Elegant shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+        
+        .subscription-plan h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-size: 2rem;
+            color: #007bff;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .features {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .features li {
+            font-size: 1.1rem;
+            color: #333;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features li::before {
+            content: "✔";
+            color: #28a745; /* Green checkmark */
+            margin-right: 0.5rem;
+        }
+        
+        .subscribe-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            margin-top: 1.5rem; /* Add space above the button */
+            align-self: center; /* Center the button horizontally */
+        }
+        
+        .subscribe-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.06);
+        }
+
+        /* Hover Effects for Floating */
+        .subscription-plan:hover {
+            transform: translateY(-15px); /* Lifts the card more */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+        }
+
+        .subscription-heading {
+            font-size: 2.7rem; /* Larger font size for prominence */
+            font-weight: 700; /* Bold text */
+            color: #333; /* Dark color for clarity */
+            margin-bottom: 2rem; /* Space between the heading and the content */
+            letter-spacing: 0.5px; /* Slight letter spacing for a more refined look */
+            text-transform: uppercase; /* Makes the heading more formal */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+        }
+        
+        
+        @media (max-width: 768px) {
+            .subscription-heading {
+                font-size: 2rem; /* Adjust size for smaller screens */
+            }
+        }
+
+    /* Back icon styling */
+    .back-icon {
+        font-size: 24px;
+        color: #007bff;
+        text-decoration: none;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+  
+      .back-icon:hover {
+        color: #0056b3;
+        text-decoration: none;
+      }
+    </style>
+
+</head>
+
+<body>
+    
+        <!-- Back Icon -->
+        <div class="navbar">
+            <a href="javascript:history.back()">
+                <i class="fa fa-arrow-left" style="color: #000; margin-right: 55px;"></i>
+            </a>
+            <span>Subscription</span>
+        </div>
+        
+
+    <section class="subscription">
+
+
+        <h2 class="subscription-heading">Choose Your Subscription Plan</h2>
+        <div class="container">
+            <!-- Monthly Subscription -->
+            <div class="subscription-plan">
+                <h3>Monthly Plan</h3>
+                <p class="price">50.ksh/month</p>
+                <p class="description">Access all resources for one month. Includes exclusive articles, webinars, and consultations.</p>
+                <ul class="features">
+                    <li>Access to research papers</li>
+                    <li>Exclusive webinars</li>
+                    <li>Monthly email updates</li>
+                </ul>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        
+            <!-- Annual Subscription -->
+            <div class="subscription-plan">
+                <h3>Annual Plan</h3>
+                <p class="price">500.ksh/year</p>
+                <p class="description">Save 20%! Get full access for a year, plus premium support and early access to new resources.</p>
+                <ul class="features">
+                    <li>All Monthly Plan features</li>
+                    <li>Priority customer support</li>
+                    <li>Early access to new content</li>
+                </ul>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

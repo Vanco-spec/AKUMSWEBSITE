@@ -1,0 +1,23 @@
+{
+  "name": "akums-website",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AKUMS"
+  ],
+  "author": "Vincent Murithi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "firebase": "^11.0.2"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "vite": "^6.0.7"
+  },
+  "description": ""
+}

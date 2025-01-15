@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="AKUMS website for medical students. Join us to access events, resources, and more.">
+        <title>AKUMS WEBSITE</title>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Include Bootstrap CSS & Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+        <!-- JavaScript -->
+        <script type="module" src="js/main.mjs" defer></script>
+    </head>
+
+<body>
+    
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+    <div class="container-fluid">
+        <!-- Brand Logo and Name -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/images/AKUMSlogo.jpg" alt="AKUMS Logo" width="40" height="40" class="me-2 rounded-circle">
+            <span class="fw-bold">AKUMS</span>
+        </a>
+        <!-- Toggler Button for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" data-target="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-target="#events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-target="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-target="#resources">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-target="#contact">Contact Us</a>
+                </li>
+            </ul>
+            <!-- Right Side (Account, Login, Sign Up) -->
+                <ul class="navbar-nav ms-auto">
+                    <!-- Profile Icon -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="profileBtn" href="#" data-target="#account" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </li>
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span>Account</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                          <li class="nav-item">
+                            <button id="logoutBtn" class="btn btn-danger w-100" style="display: none;">Logout</button>
+                          </li>
+                          <li class="nav-item">
+                            <button id="loginBtn" class="btn btn-outline-dark w-100 my-2" type="button">Login</button>
+                          </li>
+                          <li class="nav-item">
+                            <button id="signupBtn" class="btn btn-outline-dark w-100" type="button">Sign Up</button>
+                          </li>
+                        </ul>
+                      </li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Placeholder Sections -->
+    <section id="#home" class="tab-content active text-center ">
+        
+    </section>
+
+    <section id="#events" class="tab-content text-center bg-light">
+            
+    </section>
+
+    <section id="#leadership" class="tab-content text-center ">
+        
+    </section>
+
+    <section id="#about" class="tab-content text-center bg-light">
+        
+    </section>
+
+    <section id="#resources" class="tab-content text-center bg-light">
+        
+    </section>
+
+    <section id="#account" class="tab-content text-center bg-light">
+        
+    </section>
+
+
+   
+
+    <section id="#contact" class="tab-content  text-center bg-light"  style="padding-top: 35px;">
+          <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 contact-section">
+              <h2 class="text-center">Contact Us</h2>
+              <form id="messageForm" action="#" method="POST">
+                <div class="mb-4">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-4">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+              </form>
+      
+              <!-- Contact Info Section -->
+              <div class="contact-info text-center mt-5">
+                <h4>Or Reach Us Through:</h4>
+                <div class="d-flex justify-content-center">
+                  <div class="me-4">
+                    <i class="bi bi-geo-alt"></i>
+                    <p>Kenyatta University, Nairobi, Kenya</p>
+                  </div>
+                  <div class="me-4">
+                    <i class="bi bi-envelope"></i>
+                    <p>akumssecretariat@gmail.com</p>
+                  </div>
+                  <div class="me-4">
+                    <i class="bi bi-phone"></i>
+                    <p>+254 20 8703000, +254 20 8704000, +254 20 8710901</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<section>
+          <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-8 mb-4">
+                    <h5>About AKUMS</h5>
+                    <p class="small">
+                        AKUMS is a dedicated association for student doctors in Kenya, fostering excellence and collaboration in the medical field.
+                    </p>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="col-md-4 mb-4 text-center">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://www.facebook.com/yourPage" target="_blank" class="text-white mx-2">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="https://www.twitter.com/yourProfile" target="_blank" class="text-white mx-2">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yourProfile" target="_blank" class="text-white mx-2">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yourProfile" target="_blank" class="text-white mx-2">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="text-white">
+            <!-- Bottom Section -->
+            <div class="row">
+                <div class="col-md-6 text-md-start text-center">
+                    <p class="small mb-0">&copy; 2024 AKUMS. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end text-center">
+                    <p class="small mb-0">
+                        <a href="#privacy" class="text-white text-decoration-none">Privacy Policy</a> | 
+                        <a href="#terms" class="text-white text-decoration-none">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </section>
+
+    </section>
+
+
+<!-- Modal for Login/Sign-Up -->
+<div id="blur-background"></div>
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="authModalLabel" >AUTHENTICATION</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Login Form -->
+                <div id="loginFormSection">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" required autocomplete="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Enter password" required autocomplete="current-password">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <p class="mt-3">Don't have an account? <a href="#" id="showSignUp">Sign Up </a> or <a href=# id="showForgotPassword">Forgot Password</a></p>
+                   
+                </div>
+
+                        <!-- Forgot Password Form (Hidden Initially) -->
+                <div id="forgotPasswordSection" style="display: none;">
+                    <form id="forgotPasswordForm">
+                    <div class="mb-3">
+                        <label for="forgotPasswordEmail" class="form-label">Enter your email</label>
+                        <input type="email" class="form-control" id="forgotPasswordEmail" placeholder="Enter your email" required autocomplete="email">
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100">Send Reset Link</button>
+                    </form>
+                    <p class="mt-3">Remembered your password? <a href="#" id="showLoginFromForgot">Login</a></p>
+                </div>
+                
+                <!-- Sign Up Form -->
+                <div id="signupFormSection" style="display: none;">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Enter email" required autocomplete="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Enter password" required autocomplete="current-password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password"  required autocomplete="current-password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <div class="input-group">
+                                <select class="form-select" id="countryCode">
+                                    <option value="+254">+254 (Kenya)</option>
+                                    <option value="+1">+1 (USA)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+91">+91 (India)</option>
+                                    <option value="+1">+1 (USA, Canada, and other countries)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+91">+91 (India)</option>
+                                    <option value="+61">+61 (Australia)</option>
+                                    <option value="+49">+49 (Germany)</option>
+                                    <option value="+33">+33 (France)</option>
+                                    <option value="+39">+39 (Italy)</option>
+                                    <option value="+81">+81 (Japan)</option>
+                                    <option value="+55">+55 (Brazil)</option>
+                                    <option value="+52">+52 (Mexico)</option>
+                                    <option value="+27">+27 (South Africa)</option>
+                                    <option value="+34">+34 (Spain)</option>
+                                    <option value="+47">+47 (Norway)</option>
+                                    <option value="+7">+7 (Russia)</option>
+                                    <option value="+86">+86 (China)</option>
+                                    <option value="+82">+82 (South Korea)</option>
+                                    <option value="+65">+65 (Singapore)</option>
+                                    <option value="+90">+90 (Turkey)</option>
+                                    <option value="+20">+20 (Egypt)</option>
+                                    <option value="+233">+233 (Ghana)</option>
+                                    <option value="+971">+971 (UAE)</option>
+                                    <option value="+1-809">+1-809 (Dominican Republic)</option>
+                                    <option value="+60">+60 (Malaysia)</option>
+                                    <option value="+1-246">+1-246 (Barbados)</option>
+                                    <option value="+41">+41 (Switzerland)</option>
+                                    <option value="+48">+48 (Poland)</option>
+                                    <!-- Add more countries as needed -->
+                                </select>
+                                <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-warning w-100">Sign Up</button>
+                    </form>
+
+                    <div id="errorMessage" style="color: red;"></div>
+                    <p class="mt-3">Already have an account? <a href="#" id="showLogin">Login </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap JS -->
+    <script src="/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
