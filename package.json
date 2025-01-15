@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "http-server -p 8080",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "start": "http-server -p 8080",
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "vite",
+  "build": "vite build",
+  "serve": "vite preview"
+},
   "keywords": [
     "AKUMS"
   ],
@@ -19,5 +22,14 @@
     "http-server": "^14.1.1",
     "vite": "^6.0.7"
   },
-  "description": ""
+  "description": "Welcome to the official website of the **Association of Kenyatta University Medical Students (AKUMS)**. This website serves as a platform for connecting student doctors, sharing resources, and promoting collaboration within the medical community.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vanco-spec/AKUMSWEBSITE.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Vanco-spec/AKUMSWEBSITE/issues"
+  },
+  "homepage": "https://github.com/Vanco-spec/AKUMSWEBSITE#readme"
 }
