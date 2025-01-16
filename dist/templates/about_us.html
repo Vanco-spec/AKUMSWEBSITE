@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AKUMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Page-Specific Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+        }
+
+        #about h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Core Values Section */
+        #core-values {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #core-values h2 {
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            color: #333;
+        }
+
+        #core-values .values-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #core-values .values-list li {
+            flex: 0 1 calc(45% - 20px);
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+            text-align: left;
+        }
+
+        #core-values .values-list li strong {
+            color: #000;
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Leadership Section */
+        #leadership {
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+        }
+
+        #leadership h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .leader-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .leader-card {
+            background-color: #fff;
+            border-radius: 10px;
+            width: calc(20% - 20px);
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .leader-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .leader-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .leader-card h4 {
+            margin-bottom: 5px;
+            color: #000;
+        }
+
+        .leader-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .leader-card .btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .leader-card .btn:hover {
+            background-color: #333;
+        }
+
+        /* Medical Department Section */
+        #medical-department {
+            padding: 50px 20px;
+            background-color: #e9ecef;
+            color: #000;
+        }
+
+        #medical-department h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        #medical-department p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .leader-card {
+                width: calc(45% - 20px);
+            }
+
+            #core-values .values-list li {
+                flex: 0 1 calc(100% - 20px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .leader-card {
+                width: 100%;
+            }
+
+            #core-values .values-list li {
+                flex: 0 1 calc(100% - 20px);
+            }
+        }
+
+/* Leaders' Speeches Section Styles */
+.leaders-speeches {
+    background-color: #f5f5f5; /* Light background color */
+    padding: 40px 15px; /* Reduced padding */
+    font-family: 'Georgia', serif; /* Classic serif font for a professional look */
+  }
+  
+  .leaders-speeches h2 {
+    text-align: center;
+    font-size: 32px; /* Reduced heading size */
+    color: #2c3e50; /* Dark text color */
+    margin-bottom: 30px;
+  }
+  
+  .speech {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #ffffff; /* White background for individual speeches */
+    border-left: 4px solid #3498db; /* Blue border to highlight each speech */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .speech h3 {
+    font-size: 24px; /* Reduced title size */
+    color: #2980b9; /* Dark blue for the heading */
+    font-weight: bold;
+    margin-bottom: 10px; /* Reduced margin */
+  }
+  
+  .speech-paragraph {
+    font-size: 16px; /* Reduced paragraph text size */
+    line-height: 1.6; /* Slightly tighter line height */
+    color: #333;
+    text-align: justify; /* Justify text for a newspaper-like appearance */
+    margin-bottom: 18px; /* Reduced margin */
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 700px; /* Reduced width of container */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .speech-paragraph::first-letter {
+    font-size: 2.2em; /* Smaller first letter */
+    color: #2c3e50;
+    font-weight: bold;
+    padding-right: 8px;
+  }
+  
+  /* Optional: Add responsive styling */
+  @media (max-width: 768px) {
+    .leaders-speeches {
+      padding: 30px 10px;
+    }
+  
+    .speech h3 {
+      font-size: 20px;
+    }
+  
+    .speech-paragraph {
+      font-size: 14px;
+    }
+  }
+  
+  /* Medical Department Section Styles */
+  #medical-department {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 40px 15px; /* Reduced padding */
+  }
+  
+  #medical-department .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Reduced margin */
+  }
+  
+  .department-image {
+    width: 100px; /* Smaller image size */
+    height: auto;
+    margin-right: 15px; /* Reduced space between image and text */
+    border-radius: 8px;
+  }
+  
+  #medical-department h2 {
+    font-size: 28px; /* Reduced heading size */
+    color: #2c3e50;
+    margin-bottom: 10px; /* Reduced bottom margin */
+  }
+  
+  #medical-department p {
+    font-size: 14px; /* Reduced paragraph font size */
+    line-height: 1.5; /* Reduced line height */
+    color: #333;
+    text-align: justify;
+    margin-bottom: 15px; /* Reduced margin */
+    max-width: 700px; /* Reduced width of container */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #medical-department h3 {
+    font-size: 22px; /* Reduced title size */
+    color: #2980b9;
+    font-weight: bold;
+    margin-top: 20px; /* Reduced top margin */
+    margin-bottom: 8px; /* Reduced bottom margin */
+  }
+  
+  /* Optional: Add responsive styling */
+  @media (max-width: 768px) {
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .department-image {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    #medical-department h2 {
+      font-size: 24px;
+    }
+  
+    #medical-department p, #medical-department h3 {
+      font-size: 13px;
+    }
+  }
+  
+      /* Modern Sponsors Section Styling */
+.sponsors img {
+    margin: 0 20px;
+    max-width: 70%; /* Ensure images scale down */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 70px; /* Limit maximum height */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.sponsors img:hover {
+    transform: scale(1.15); /* Slightly bigger scale on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Spacing between items */
+    padding: 50px 0;
+}
+
+/* Sponsors Section Header with Underline Effect */
+.sponsors h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.sponsors h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.sponsors h2:hover::after {
+    width: 100%;
+}
+
+/* Sponsors Section Updated with Smaller Font and Modern Font */
+.sponsors p {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    font-size: 0.9rem; /* Smaller font size */
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+  
+    </style>
+</head>
+<body>
+
+<!-- About Section -->
+<section id="about" style="background-color: #ffffff;">
+    <div class="container">
+        <h2 style="margin-top: 50px;">About Us</h2>
+        <p>AKUMS is a vibrant student association dedicated to fostering collaboration, research, and education among aspiring medical professionals. Join us in shaping the future of healthcare through knowledge, innovation, and community outreach.</p>
+    </div>
+</section>
+
+<!-- Core Values Section -->
+<section id="core-values">
+    <div class="container">
+        <h2>Core Values</h2>
+        <ul class="values-list">
+            <li><strong>Vision:</strong> To inspire excellence in medical education and practice.</li>
+            <li><strong>Mission:</strong> To create a collaborative platform for medical students to thrive academically and professionally.</li>
+            <li><strong>Integrity:</strong> Upholding ethical standards in all our endeavors.</li>
+            <li><strong>Innovation:</strong> Encouraging creative solutions to healthcare challenges.</li>
+            <li><strong>Community:</strong> Building a supportive network for lifelong learning and service.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Leadership Section -->
+<section id="leadership">
+    <div class="container">
+        <h2>Our Leaders</h2>
+        <div class="leader-cards">
+            <!-- Leader 1 -->
+            <div class="leader-card">
+                <img src="images/leader1.jpg" alt="Leader 1">
+                <h4>Dr. Jane Doe</h4>
+                <p>President</p>
+                <p>Leading AKUMS towards innovation and excellence in medical education.</p>
+                <a href="mailto:jane.doe@example.com" class="btn">Contact</a>
+            </div>
+            <!-- Leader 2 -->
+            <div class="leader-card">
+                <img src="images/leader2.jpg" alt="Leader 2">
+                <h4>Dr. John Smith</h4>
+                <p>Vice President</p>
+                <p>Supporting initiatives to foster growth and collaboration.</p>
+                <a href="mailto:john.smith@example.com" class="btn">Contact</a>
+            </div>
+            <!-- Leader 3 -->
+            <div class="leader-card">
+                <img src="images/leader3.jpg" alt="Leader 3">
+                <h4>Dr. Mary Williams</h4>
+                <p>Secretary</p>
+                <p>Ensuring effective communication and organization.</p>
+                <a href="mailto:mary.williams@example.com" class="btn">Contact</a>
+            </div>
+            <!-- Leader 4 -->
+            <div class="leader-card">
+                <img src="images/leader4.jpg" alt="Leader 4">
+                <h4>Dr. Sarah Lee</h4>
+                <p>Treasurer</p>
+                <p>Managing finances with transparency and integrity.</p>
+                <a href="mailto:sarah.lee@example.com" class="btn">Contact</a>
+            </div>
+            <!-- Leader 5 -->
+            <div class="leader-card">
+                <img src="images/leader5.jpg" alt="Leader 5">
+                <h4>Dr. David Brown</h4>
+                <p>Public Relations</p>
+                <p>Building connections and promoting our mission.</p>
+                <a href="mailto:david.brown@example.com" class="btn">Contact</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="leaders-speeches" class="leaders-speeches">
+    <div class="container">
+      <h2>Leaders' Speeches</h2>
+      
+      <div class="speech">
+        <h3>President's Speech</h3>
+        <p class="speech-paragraph">"As we embark on a new chapter, we envision a community where our medical students grow to be exceptional healthcare providers. Through collaboration, education, and service, we continue to build a future that is brighter and healthier for everyone. Let’s stand united in our mission."</p>
+      </div>
+  
+      <div class="speech">
+        <h3>Vice President's Speech</h3>
+        <p class="speech-paragraph">"Our journey is one of constant learning and evolving. By strengthening our bond as a community, we will ensure that every member, regardless of their background, has the support they need to excel in both academics and leadership."</p>
+      </div>
+  
+      <div class="speech">
+        <h3>Secretary General's Speech</h3>
+        <p class="speech-paragraph">"At AKUMS, we aim to not only educate but also to advocate for better healthcare systems. Our efforts will shape future generations of doctors who are knowledgeable, empathetic, and committed to serving humanity. Together, we create an impact that will resonate beyond the classroom."</p>
+      </div>
+  
+      <div class="speech">
+        <h3>Treasurer's Speech</h3>
+        <p class="speech-paragraph">"Financial responsibility is key to ensuring the sustainability of our initiatives. As Treasurer, I am committed to optimizing resources and ensuring that every student has the opportunities they need to succeed and grow in the medical field."</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Medical Department Section -->
+<section id="medical-department">
+    <div class="container">
+        <div class="section-header">
+            <img src="/images/download.png" alt="Kenyatta University" class="department-image">
+            <h2>Kenyatta University Medical Department</h2>
+        </div>
+        <p>The Kenyatta University Medical Department is at the forefront of medical education and research, providing students with the resources and opportunities needed to excel in the healthcare industry. Our esteemed faculty and state-of-the-art facilities ensure the highest standards of learning and innovation.</p>
+        
+        <h3>Academic Programs</h3>
+        <p>We offer a range of undergraduate and postgraduate programs designed to prepare students for a successful career in medicine. Our programs focus on combining theoretical knowledge with hands-on clinical experience to ensure that our graduates are well-equipped to meet the challenges of modern healthcare.</p>
+        
+        <h3>Research & Innovation</h3>
+        <p>Our department is committed to advancing medical knowledge through cutting-edge research and innovation. We collaborate with leading healthcare institutions and contribute to groundbreaking studies that shape the future of healthcare. Our research programs cover a wide range of medical fields, from basic sciences to clinical and translational research.</p>
+        
+        <h3>Student Support</h3>
+        <p>At Kenyatta University Medical Department, student success is our priority. We offer a variety of support services, including academic counseling, career guidance, and mental health resources. Our dedicated staff ensures that students have the tools and support they need to thrive throughout their studies and beyond.</p>
+
+        <h3>Our Facilities</h3>
+        <p>Our medical students have access to state-of-the-art laboratories, simulation centers, and clinical spaces. We continually invest in infrastructure to provide our students with the best possible learning environment, ensuring they are well-prepared for their medical careers.</p>
+    </div>
+</section>
+
+<!-- Sponsors Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Our Sponsors</h2>
+    <p class="text-center mb-4">We would like to extend our heartfelt thanks and appreciation to our generous sponsors for their unwavering support. Your contributions play a crucial role in helping us achieve our goals, and we are truly grateful for your partnership. We look forward to continuing this journey together!</p>
+    <div class="row justify-content-center sponsors">
+        <div class="col-md-2">
+            <img src="/images/IFMSA-LOGO-SOCIALS-1080X1080.png" class="img-fluid" alt="Sponsor 1">
+        </div>
+        <div class="col-md-2">
+            <img src="/images/images.png" class="img-fluid" alt="Sponsor 2">
+        </div>
+        <div class="col-md-2">
+            <img src="/images/download.png" class="img-fluid" alt="Sponsor 3">
+        </div>
+        <div class="col-md-2">
+            <img src="/images/redcross.png" class="img-fluid" alt="Sponsor 4">
+        </div>
+        <div class="col-md-2">
+            <img src="/images/KUTRRH.png" class="img-fluid" alt="Sponsor 4">
+        </div>
+    </div>
+</div>
+
+
+
+ <!-- Footer -->
+ <footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-md-8 mb-4">
+                <h5>About AKUMS</h5>
+                <p class="small">
+                    AKUMS is a dedicated association for student doctors in Kenya, fostering excellence and collaboration in the medical field.
+                </p>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="col-md-4 mb-4 text-center">
+                <h5>Follow Us</h5>
+                <div class="d-flex justify-content-center">
+                    <a href="https://www.facebook.com/yourPage" target="_blank" class="text-white mx-2">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://www.twitter.com/yourProfile" target="_blank" class="text-white mx-2">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/yourProfile" target="_blank" class="text-white mx-2">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourProfile" target="_blank" class="text-white mx-2">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="text-white">
+        <!-- Bottom Section -->
+        <div class="row">
+            <div class="col-md-6 text-md-start text-center">
+                <p class="small mb-0">&copy; 2024 AKUMS. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end text-center">
+                <p class="small mb-0">
+                    <a href="#privacy" class="text-white text-decoration-none">Privacy Policy</a> | 
+                    <a href="#terms" class="text-white text-decoration-none">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
