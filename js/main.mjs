@@ -55,6 +55,20 @@ function toggleAuthUI(isLoggedIn, user = null) {
 
 }
 
+// Define the showToast function
+function showToast(message, type = 'info') {
+  const toastEl = document.getElementById('mainToast');
+  const toastMessage = document.getElementById('toastMessage');
+
+  // Set the message and style based on type
+  toastMessage.textContent = message;
+  toastEl.className = `toast align-items-center text-bg-${type}`;
+
+  // Initialize and show the toast
+  const toast = new bootstrap.Toast(toastEl);
+  toast.show();
+}
+
 // Handle Sign-Up Form Submission
 document.getElementById('signupForm').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -65,24 +79,30 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
   const countryCode = document.getElementById('countryCode').value;
   const group = "guest"; // Default group for all new sign-ups
  
+  
     // Validate Name (can't be empty)
-    if (email === "") {
-      alert("Please enter your email.");
+    if (email === "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showToast("Please enter a valid email address.");
       return;
     }
 
-    // Validate Password (check if the two passwords match)
-  if (password !== confirmPassword) {
-    alert("Passwords do not match.");
-    return;
-  }
+      // Validate Password (check if the two passwords match)
+    if (password !== confirmPassword) {
+      showToast("Passwords do not match.");
+      return;
+    }
+
+    if (password.length < 8) {
+      showToast("Password must be at least 8 characters long.");
+      return;
+    }
 
 
-  // Validate Phone Number (basic check to ensure it is not empty)
-  if (phoneNumber === "") {
-    alert("Please enter your phone number.");
-    return;
-  }
+    // Validate Phone Number (ensure it's not empty and contains only numbers)
+    if (!/^\d+$/.test(phoneNumber)) {
+      showToast("Please enter a valid phone number (digits only).", "warning");
+      return;
+    }
 
 
   
@@ -106,10 +126,9 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
 })
 
         .then(() => {
-          console.log("User data stored in Firestore!");
-
+         
           // Show success message
-          alert("Sign-up successful! Welcome to the platform.");
+          alert("Sign-up successful! Welcome to the official AKUMS website.");
           
           // Automatically update UI after signup as user is already logged in
           updateUI(user);
@@ -126,7 +145,7 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
           console.error("Error storing user data:", error);
 
           // Show error message to the user
-          alert("Sign-up successful, but we encountered an issue storing your information. Please try again.");
+          showToast("Sign-up successful, but we encountered an issue storing your information. Please try again.");
         
         });
 
@@ -136,7 +155,7 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
       console.error("Sign-up error:", error.message);
 
       // Show error message to the user
-      alert("Sign-up unsuccessful: " + error.message);
+      showToast("Sign-up unsuccessful: " + error.message);
 
     });
 
@@ -815,4 +834,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Modal or Blur Background element not found!');
   }
 });
+
+
+
 
