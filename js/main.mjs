@@ -98,14 +98,13 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
     }
 
 
-    // Validate Phone Number (ensure it's not empty and contains only numbers)
-    if (!/^\d+$/.test(phoneNumber)) {
-      showToast("Please enter a valid phone number (digits only).", "warning");
+      // Validate Phone Number (ensure it's at least 9 digits and contains only numbers)
+    if (!/^\d{9,}$/.test(phoneNumber)) {
+      showToast("Please enter a valid phone number with at least 9 digits.", "warning");
       return;
     }
 
 
-  
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
@@ -195,21 +194,21 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
           } else {
 
             console.error("No document found for the user in Firestore.");
-            alert("Login successful, but user details could not be retrieved.");
+            showToast("Login successful, but user details could not be retrieved.");
           }
 
         })
 
         .catch((error) => {
           console.error("Error fetching user data:", error);
-          alert("Login successful, but there was an error fetching your details.");
+          showToast("Login successful, but there was an error fetching your details.");
         });
 
     })
 
     .catch((error) => {
       console.error("Login error:", error.message);
-      alert("Login failed. Please check your email and password.");
+      showToast("Login failed. Please check your email and password.");
     });
 
 });
@@ -244,6 +243,7 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
   signOut(auth)
     .then(() => {
       console.log("User signed out successfully.");
+      alert("Logged out successful");
       
       // Update the UI after log out
       updateUI(null);  // Pass null as user is no longer logged in
@@ -253,7 +253,7 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
 
     .catch((error) => {
       console.error("Log out error:", error);
-      alert("An error occurred while logging out.");
+      showToast("An error occurred while logging out.");
     });
     
 });
