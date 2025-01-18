@@ -338,42 +338,73 @@
     #medical-department p, #medical-department h3 {
       font-size: 13px;
     }
+
+    .sponsors img {
+        max-width: 90%;
+        max-height: 80px;
+    }
+
+    .sponsors h2 {
+        font-size: 2rem;
+    }
+
+    .sponsor-abbreviation {
+        font-size: 0.9rem;
+    }
   }
   
-      /* Modern Sponsors Section Styling */
+/* Sponsors Section Styling */
+.sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between sponsor logos */
+    padding: 50px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for the section */
+}
+
+/* Sponsor Image Styling */
+.sponsor-item {
+    text-align: center; /* Center the image and abbreviation */
+}
+
 .sponsors img {
     margin: 0 20px;
-    max-width: 70%; /* Ensure images scale down */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 70px; /* Limit maximum height */
+    max-width: 80%; /* Scale down images to ensure they fit within the container */
+    height: auto;
+    max-height: 100px; /* Limit maximum height */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 }
 
 .sponsors img:hover {
-    transform: scale(1.15); /* Slightly bigger scale on hover */
+    transform: scale(1.1); /* Slightly bigger scale on hover */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
-.sponsors {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px; /* Spacing between items */
-    padding: 50px 0;
+/* Abbreviation Styling */
+.sponsor-abbreviation {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-/* Sponsors Section Header with Underline Effect */
+/* Sponsors Section Header */
 .sponsors h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Poppins', sans-serif;
     color: #333;
     position: relative;
     display: inline-block;
+    text-transform: uppercase;
 }
 
 .sponsors h2::after {
@@ -391,17 +422,33 @@
     width: 100%;
 }
 
-/* Sponsors Section Updated with Smaller Font and Modern Font */
+/* Sponsors Section Paragraph */
 .sponsors p {
-    font-family: 'Roboto', sans-serif; /* Modern font */
-    font-size: 0.9rem; /* Smaller font size */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     text-align: center;
     margin-bottom: 40px;
     color: #555;
     line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
 }
+    /* Further adjustment for very small screens (phones in portrait) */
+    @media (max-width: 480px) {
 
+        .sponsors img {
+            max-width: 80%;
+            max-height: 70px;
+        }
 
+        .sponsors h2 {
+            font-size: 1.8rem;
+        }
+
+        .sponsor-abbreviation {
+            font-size: 0.8rem;
+        }
+    }
   
     </style>
 </head>
@@ -530,27 +577,42 @@
 <!-- Sponsors Section -->
 <div class="container my-5">
     <h2 class="text-center mb-4">Our Sponsors</h2>
-    <p class="text-center mb-4">We would like to extend our heartfelt thanks and appreciation to our generous sponsors for their unwavering support. Your contributions play a crucial role in helping us achieve our goals, and we are truly grateful for your partnership. We look forward to continuing this journey together!</p>
+    <p class="text-center mb-4">We would like to extend our heartfelt thanks and appreciation to our generous sponsors for their unwavering support. Your contributions play a crucial role in helping us achieve our goals, and we are truly grateful for your partnership. We look forward to continuing this journey together!</p>    
+
+    <!-- Sponsor Logos with Abbreviations Below -->
     <div class="row justify-content-center sponsors">
         <div class="col-md-2">
-            <img src="/images/IFMSA-LOGO-SOCIALS-1080X1080.png" class="img-fluid" alt="Sponsor 1">
+            <div class="sponsor-item">
+                <img src="/images/IFMSA-LOGO-SOCIALS-1080X1080.png" class="img-fluid" alt="Sponsor 1">
+                <div class="sponsor-abbreviation">IFMSA</div>
+            </div>
         </div>
         <div class="col-md-2">
-            <img src="/images/images.png" class="img-fluid" alt="Sponsor 2">
+            <div class="sponsor-item">
+                <img src="/images/images.png" class="img-fluid" alt="Sponsor 2">
+                <div class="sponsor-abbreviation">MSAKE</div>
+            </div>
         </div>
         <div class="col-md-2">
-            <img src="/images/download.png" class="img-fluid" alt="Sponsor 3">
+            <div class="sponsor-item">
+                <img src="/images/download.png" class="img-fluid" alt="Sponsor 3">
+                <div class="sponsor-abbreviation">Kenyatta Univesity</div>
+            </div>
         </div>
         <div class="col-md-2">
-            <img src="/images/redcross.png" class="img-fluid" alt="Sponsor 4">
+            <div class="sponsor-item">
+                <img src="/images/redcross.png" class="img-fluid" alt="Sponsor 4">
+                <div class="sponsor-abbreviation">Red Cross</div>
+            </div>
         </div>
         <div class="col-md-2">
-            <img src="/images/KUTRRH.png" class="img-fluid" alt="Sponsor 4">
+            <div class="sponsor-item">
+                <img src="/images/KUTRRH.png" class="img-fluid" alt="Sponsor 5">
+                <div class="sponsor-abbreviation">KUTRRH</div>
+            </div>
         </div>
     </div>
 </div>
-
-
 
  <!-- Footer -->
  <footer class="bg-dark text-white py-5">

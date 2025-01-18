@@ -33,65 +33,93 @@
         border: none;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+        transition: transform 20.0s ease;
     }
     
+    /* Card Body Styling */
     .card-body {
+        background-color: #fff;
+        border-radius: 8px;
         padding: 20px;
+        color: #444;
     }
     
     .card-title {
-        font-size: 1.25rem;
-        font-weight: bold;
-    }
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: #333;
+      }
     
-    .card-text {
+      .card-text {
         font-size: 1rem;
-    }
+        color: #666;
+        line-height: 1.6;
+      }
     
-    .card:hover {
-        transform: translateY(-5px);
-    }
+    .card:hover .card-body {
+        transform: translateY(-7px);
+        background-color: #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
     
     .btn-primary {
         background-color: #007bff;
         border-color: #007bff;
     }
     
-    /* Modern Sponsors Section Styling */
+/* Sponsors Section Styling */
+.sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between sponsor logos */
+    padding: 50px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for the section */
+}
+
+/* Sponsor Image Styling */
+.sponsor-item {
+    text-align: center; /* Center the image and abbreviation */
+}
+
 .sponsors img {
     margin: 0 20px;
-    max-width: 70%; /* Ensure images scale down */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 70px; /* Limit maximum height */
+    max-width: 80%; /* Scale down images to ensure they fit within the container */
+    height: auto;
+    max-height: 100px; /* Limit maximum height */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 }
 
 .sponsors img:hover {
-    transform: scale(1.15); /* Slightly bigger scale on hover */
+    transform: scale(1.1); /* Slightly bigger scale on hover */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
-.sponsors {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px; /* Spacing between items */
-    padding: 50px 0;
+/* Abbreviation Styling */
+.sponsor-abbreviation {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-/* Sponsors Section Header with Underline Effect */
+/* Sponsors Section Header */
 .sponsors h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Poppins', sans-serif;
     color: #333;
     position: relative;
     display: inline-block;
+    text-transform: uppercase;
 }
 
 .sponsors h2::after {
@@ -109,15 +137,107 @@
     width: 100%;
 }
 
-/* Sponsors Section Updated with Smaller Font and Modern Font */
+/* Sponsors Section Paragraph */
 .sponsors p {
-    font-family: 'Roboto', sans-serif; /* Modern font */
-    font-size: 0.9rem; /* Smaller font size */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     text-align: center;
     margin-bottom: 40px;
     color: #555;
     line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
 }
+
+
+.announcement-section {
+    opacity: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title Styling */
+  .announcement-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+ /* Calendar of Events Section Styling */
+.calendar-events-section {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    background-color: #fff;
+    padding: 40px 0;
+    border-radius: 8px;
+    
+  }
+  
+  /* Title Styling */
+  .calendar-events-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-events-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* Flexbox for equal-height columns */
+  .calendar-events-section .row {
+    display: flex;
+    align-items: stretch; /* Ensures columns stretch to the same height */
+  }
+  
+  /* Responsive Image Styling */
+  .calendar-events-section .img-fluid {
+    border-radius: 8px;
+    object-fit: cover; /* Ensures the image scales proportionally */
+    height: 100%; /* Ensures image takes the full height of the column */
+  }
+  
+  /* Event List Styling */
+  .list-group-item {
+    background-color: #fff;
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .list-group-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Event Header Styling */
+  .list-group-item h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .list-group-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .list-group-item i {
+    margin-right: 8px;
+  }
 
     
     footer {
@@ -136,14 +256,103 @@
         }
     
         .sponsors img {
+            max-width: 90%;
             max-height: 80px;
-            margin: 10px;
         }
+    
+        .sponsors h2 {
+            font-size: 2rem;
+        }
+    
+        .sponsor-abbreviation {
+            font-size: 0.9rem;
+        }
+
+        .card {
+            margin-bottom: 20px;
+          }
     
         .card-body {
             padding: 15px;
         }
-    }
+
+        .announcement-section h2 {
+            font-size: 1.8rem;  /* Reduced font size for small screens */
+          }
+        
+          .card-title {
+            font-size: 1.1rem;  /* Reduced card title font size for small screens */
+          }
+        
+          .card-text {
+            font-size: 0.9rem;  /* Reduced card text size for small screens */
+          }
+       
+          .calendar-events-section h2 {
+            font-size: 2rem;
+          }
+        
+          .calendar-events-section p {
+            font-size: 1rem;
+          }
+        
+          .calendar-events-section .row {
+            flex-direction: column-reverse;
+          }
+        
+          .calendar-events-section .col-md-6 {
+            margin-bottom: 20px;
+          }
+        
+          .list-group-item {
+            padding: 15px;
+          }
+        }
+        
+
+        /* Further adjustment for very small screens (phones in portrait) */
+        @media (max-width: 480px) {
+            .announcement-section h2 {
+            font-size: 1.5rem;  /* Even smaller for portrait phones */
+            }
+        
+            .card-title {
+            font-size: 1rem;  /* Even smaller for portrait phones */
+            }
+        
+            .card-text {
+            font-size: 0.85rem;  /* Even smaller for portrait phones */
+            }
+
+            .calendar-events-section h2 {
+                font-size: 1.8rem;
+              }
+            
+              .calendar-events-section p {
+                font-size: 0.9rem;
+              }
+            
+              .list-group-item h5 {
+                font-size: 1rem;
+              }
+            
+              .list-group-item p {
+                font-size: 0.9rem;
+              }
+              .sponsors img {
+                max-width: 80%;
+                max-height: 70px;
+            }
+        
+            .sponsors h2 {
+                font-size: 1.8rem;
+            }
+        
+            .sponsor-abbreviation {
+                font-size: 0.8rem;
+            }
+        }
+        
     </style>
     
 <body>
@@ -184,125 +393,138 @@
         </div>
 </div>
 
-<div style="margin-top: 175px;">
-        <!-- Announcements or News Section -->
-        <div class="container my-5"  style="margin-top: 20px;">
-            <h2 class="text-center mb-4">Latest Announcements</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Important Notice</h5>
-                            <p class="card-text">The next medical seminar will be held next week. Make sure to register!</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">New Scholarship Opportunity</h5>
-                            <p class="card-text">Apply for the annual medical scholarship for outstanding students.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Student Networking Event</h5>
-                            <p class="card-text">Join us for an evening of networking with alumni and industry leaders.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
+<div class="container my-5 announcement-section" style="margin-top: 40px;">
+    <h2 class="text-center mb-4">LATEST ANNOUNCEMENTS</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Important Notice</h5>
+                    <p class="card-text">The next medical seminar will be held next week. Make sure to register!</p>
                 </div>
             </div>
         </div>
-</div>
-
-<div style="margin-top: 100px; margin-bottom: 100px;">
-        <!-- Calendar of Events Section -->
-        <div class="container my-5">
-            <h2 class="text-center mb-4">Calendar of Events</h2>
-            <p class="text-center mb-4">
-                Stay updated with our upcoming events. Mark your calendars and join us to create memories and gain insights!
-            </p>
-            <div class="row">
-                <!-- Image on the Left -->
-                <div class="col-md-6 mb-4">
-                    <img src="/images/pexels-jibarofoto-2833037.jpg" alt="Events" class="img-fluid rounded">
-                </div>
-
-                <!-- Event Details on the Right -->
-                <div class="col-md-6 mb-4">
-                    <ul class="list-group">
-                        <!-- Event 1 -->
-                        <li class="list-group-item">
-                            <h5><i class="bi bi-calendar-event"></i> Medical Seminar</h5>
-                            <p class="text-muted">
-                                <i class="bi bi-clock"></i> Jan 20, 2025 | <i class="bi bi-geo-alt"></i> Main Auditorium
-                            </p>
-                        </li>
-
-                        <!-- Event 2 -->
-                        <li class="list-group-item">
-                            <h5><i class="bi bi-calendar-event"></i> Networking Evening</h5>
-                            <p class="text-muted">
-                                <i class="bi bi-clock"></i> Feb 10, 2025 | <i class="bi bi-geo-alt"></i> Rooftop Garden
-                            </p>
-                            </li>
-
-                        <!-- Event 3 -->
-                        <li class="list-group-item">
-                            <h5><i class="bi bi-calendar-event"></i> Annual Health Camp</h5>
-                            <p class="text-muted">
-                                <i class="bi bi-clock"></i> Mar 15, 2025 | <i class="bi bi-geo-alt"></i> Community Center
-                            </p>
-                            </li>
-
-                            <!-- Event 2 -->
-                        <li class="list-group-item">
-                            <h5><i class="bi bi-calendar-event"></i> Networking Evening</h5>
-                            <p class="text-muted">
-                                <i class="bi bi-clock"></i> Feb 10, 2025 | <i class="bi bi-geo-alt"></i> Rooftop Garden
-                            </p>
-                            </li>
-
-                        <!-- Event 3 -->
-                        <li class="list-group-item">
-                            <h5><i class="bi bi-calendar-event"></i> Annual Health Camp</h5>
-                            <p class="text-muted">
-                                <i class="bi bi-clock"></i> Mar 15, 2025 | <i class="bi bi-geo-alt"></i> Community Center
-                            </p>
-                            </li>
-                    </ul>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">New Scholarship Opportunity</h5>
+                    <p class="card-text">Apply for the annual medical scholarship for outstanding students.</p>
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Student Networking Event</h5>
+                    <p class="card-text">Join us for an evening of networking with alumni and industry leaders.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<div class="calendar-events-section">
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Calendar of Events</h2>
+        <p class="text-center mb-4">
+            Stay updated with our upcoming events. Mark your calendars and join us to create memories and gain insights!
+        </p>
+        <div class="row">
+            <!-- Image on the Left -->
+            <div class="col-md-6 mb-4">
+                <img src="/images/pexels-jibarofoto-2833037.jpg" alt="Events" class="img-fluid rounded">
+            </div>
+
+            <!-- Event Details on the Right -->
+            <div class="col-md-6 mb-4">
+                <ul class="list-group">
+                    <!-- Event 1 -->
+                    <li class="list-group-item">
+                        <h5><i class="bi bi-calendar-event"></i> Medical Seminar</h5>
+                        <p class="text-muted">
+                            <i class="bi bi-clock"></i> Jan 20, 2025 | <i class="bi bi-geo-alt"></i> Main Auditorium
+                        </p>
+                    </li>
+
+                    <!-- Event 2 -->
+                    <li class="list-group-item">
+                        <h5><i class="bi bi-calendar-event"></i> Networking Evening</h5>
+                        <p class="text-muted">
+                            <i class="bi bi-clock"></i> Feb 10, 2025 | <i class="bi bi-geo-alt"></i> Rooftop Garden
+                        </p>
+                    </li>
+
+                    <!-- Event 3 -->
+                    <li class="list-group-item">
+                        <h5><i class="bi bi-calendar-event"></i> Annual Health Camp</h5>
+                        <p class="text-muted">
+                            <i class="bi bi-clock"></i> Mar 15, 2025 | <i class="bi bi-geo-alt"></i> Community Center
+                        </p>
+                    </li>
+
+                    <!-- Event 2 -->
+                    <li class="list-group-item">
+                        <h5><i class="bi bi-calendar-event"></i> Networking Evening</h5>
+                        <p class="text-muted">
+                            <i class="bi bi-clock"></i> Feb 10, 2025 | <i class="bi bi-geo-alt"></i> Rooftop Garden
+                        </p>
+                    </li>
+
+                    <!-- Event 3 -->
+                    <li class="list-group-item">
+                        <h5><i class="bi bi-calendar-event"></i> Annual Health Camp</h5>
+                        <p class="text-muted">
+                            <i class="bi bi-clock"></i> Mar 15, 2025 | <i class="bi bi-geo-alt"></i> Community Center
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Sponsors Section -->
 <div class="container my-5">
     <h2 class="text-center mb-4">Our Sponsors</h2>
-    <p class="text-center mb-4">We would like to extend our heartfelt thanks and appreciation to our generous sponsors for their unwavering support. Your contributions play a crucial role in helping us achieve our goals, and we are truly grateful for your partnership. We look forward to continuing this journey together!</p>
+    <p class="text-center mb-4">We would like to extend our heartfelt thanks and appreciation to our generous sponsors for their unwavering support. Your contributions play a crucial role in helping us achieve our goals, and we are truly grateful for your partnership. We look forward to continuing this journey together!</p>    
+
+    <!-- Sponsor Logos with Abbreviations Below -->
     <div class="row justify-content-center sponsors">
         <div class="col-md-2">
-            <img src="/images/IFMSA-LOGO-SOCIALS-1080X1080.png" class="img-fluid" alt="Sponsor 1">
+            <div class="sponsor-item">
+                <img src="/images/IFMSA-LOGO-SOCIALS-1080X1080.png" class="img-fluid" alt="Sponsor 1">
+                <div class="sponsor-abbreviation">IFMSA</div>
+            </div>
         </div>
         <div class="col-md-2">
-            <img src="/images/images.png" class="img-fluid" alt="Sponsor 2">
+            <div class="sponsor-item">
+                <img src="/images/images.png" class="img-fluid" alt="Sponsor 2">
+                <div class="sponsor-abbreviation">MSAKE</div>
+            </div>
         </div>
         <div class="col-md-2">
-            <img src="/images/download.png" class="img-fluid" alt="Sponsor 3">
+            <div class="sponsor-item">
+                <img src="/images/download.png" class="img-fluid" alt="Sponsor 3">
+                <div class="sponsor-abbreviation">Kenyatta Univesity</div>
+            </div>
         </div>
         <div class="col-md-2">
-            <img src="/images/redcross.png" class="img-fluid" alt="Sponsor 4">
+            <div class="sponsor-item">
+                <img src="/images/redcross.png" class="img-fluid" alt="Sponsor 4">
+                <div class="sponsor-abbreviation">Red Cross</div>
+            </div>
         </div>
         <div class="col-md-2">
-            <img src="/images/KUTRRH.png" class="img-fluid" alt="Sponsor 4">
+            <div class="sponsor-item">
+                <img src="/images/KUTRRH.png" class="img-fluid" alt="Sponsor 5">
+                <div class="sponsor-abbreviation">KUTRRH</div>
+            </div>
         </div>
     </div>
 </div>
+
 
 
  <!-- Footer -->
