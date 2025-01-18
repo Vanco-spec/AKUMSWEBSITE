@@ -149,24 +149,6 @@
     margin: 0 auto 40px auto;
 }
 
-
-.announcement-section {
-    opacity: 0;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Title Styling */
-  .announcement-section h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-
  /* Calendar of Events Section Styling */
 .calendar-events-section {
     margin-top: 30px;
@@ -275,11 +257,6 @@
         .card-body {
             padding: 15px;
         }
-
-        .announcement-section h2 {
-            font-size: 1.8rem;  /* Reduced font size for small screens */
-          }
-        
           .card-title {
             font-size: 1.1rem;  /* Reduced card title font size for small screens */
           }
@@ -312,9 +289,6 @@
 
         /* Further adjustment for very small screens (phones in portrait) */
         @media (max-width: 480px) {
-            .announcement-section h2 {
-            font-size: 1.5rem;  /* Even smaller for portrait phones */
-            }
         
             .card-title {
             font-size: 1rem;  /* Even smaller for portrait phones */
@@ -393,30 +367,33 @@
         </div>
 </div>
 
-<div class="container my-5 announcement-section" style="margin-top: 40px;">
-    <h2 class="text-center mb-4">LATEST ANNOUNCEMENTS</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Important Notice</h5>
-                    <p class="card-text">The next medical seminar will be held next week. Make sure to register!</p>
+<div style="margin-top: 175px;">
+    <!-- Announcements or News Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Latest Announcements</h2>
+        <div class="row" data-animate>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Important Notice</h5>
+                        <p class="card-text">The next medical seminar will be held next week. Make sure to register!</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">New Scholarship Opportunity</h5>
-                    <p class="card-text">Apply for the annual medical scholarship for outstanding students.</p>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">New Scholarship Opportunity</h5>
+                        <p class="card-text">Apply for the annual medical scholarship for outstanding students.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Student Networking Event</h5>
-                    <p class="card-text">Join us for an evening of networking with alumni and industry leaders.</p>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Student Networking Event</h5>
+                        <p class="card-text">Join us for an evening of networking with alumni and industry leaders.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -507,7 +484,7 @@
         <div class="col-md-2">
             <div class="sponsor-item">
                 <img src="/images/download.png" class="img-fluid" alt="Sponsor 3">
-                <div class="sponsor-abbreviation">Kenyatta Univesity</div>
+                <div class="sponsor-abbreviation">Kenyatta University</div>
             </div>
         </div>
         <div class="col-md-2">
