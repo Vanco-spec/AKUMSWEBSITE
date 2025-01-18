@@ -1,3 +1,6 @@
+/* Font import for attractive style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -38,10 +41,6 @@ body {
   transform: translateY(-100%); /* Move navbar out of view */
   transition: transform 0.3s ease; /* Smooth transition */
 }
-
-
-/* Font import for attractive style */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 /* Apply increased height only on larger screens */
 @media (min-width: 769px) {
