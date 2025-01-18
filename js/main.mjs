@@ -803,11 +803,11 @@ document.addEventListener('click', async (e) => {
 
               alert("You have successfully registered for the event!");
           } else {
-              alert("Please log in to register for events.");
+            showToast("Please log in to register for events.");
           }
       } catch (error) {
           console.error("Error registering for event:", error);
-          alert("An error occurred while registering. Please try again.");
+          showToast("An error occurred while registering. Please try again.");
       }
   }
 });
