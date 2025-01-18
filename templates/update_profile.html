@@ -14,6 +14,36 @@
       font-family: 'Arial', sans-serif;
     }
 
+    
+        /* Navbar */
+        .navbar {
+          background-color: #fff ;
+          color:  #000;
+          height: 35px;
+          padding: 1rem 1.5rem;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar a {
+          color: #fff;
+          font-size: 1.2rem;
+          display: flex;
+          align-items: center;
+          transition: color 0.3s ease;
+      }
+
+      .navbar a:hover {
+          color: #bbb;
+      }
+
+      .navbar span {
+          font-size: 1.5rem;
+          font-weight: bold;
+      }
+
     /* Back icon styling */
     .back-icon {
       font-size: 24px;
@@ -114,11 +144,13 @@
 </head>
 <body>
 
-  <!-- Back Icon -->
-  <a href="/index.html" class="back-icon">
-    <i class="fas fa-arrow-left"></i>
+  <!-- Navbar -->
+<div class="navbar">
+  <a href="javascript:history.back()">
+      <i class="fa fa-arrow-left" style="color: #000; margin-right: 55px;"></i>
   </a>
-
+  <span>UPDATE PROFILE</span>
+</div>
   <!-- Update Profile Form -->
   <div class="update-profile-container">
     <h2 class="text-center mb-4">Update Profile</h2>

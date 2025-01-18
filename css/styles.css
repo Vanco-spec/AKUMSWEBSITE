@@ -226,40 +226,146 @@ body {
 }
 
 
+/* Modal Backdrop */
 .modal {
-    position: fixed; /* Ensure it's fixed on the screen */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none; /* Ensure it's initially hidden and shown using JavaScript */
-
-} 
-
-.modal-content {
-    border-radius: 10px;
-    overflow: hidden;
-    min-width: 300px; /* Make sure the modal has a reasonable width */
-    background-color: rgba(255, 255, 255, 0.9); /* 0.9 for slight transparency */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none; /* Hidden by default */
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly darker transparent backdrop */
+  z-index: 1050; /* Ensure it's above other elements */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  overflow: hidden; /* Prevent background scroll */
+  animation: fadeInBackdrop 0.3s ease-out; /* Smooth fade-in for the backdrop */
 }
 
+/* Modal Content */
+.modal-content {
+  border-radius: 12px; /* Softer rounded corners */
+  overflow: hidden; /* Ensure content stays inside */
+  background-color: #ffffff; /* Clean white background */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Deeper shadow for better depth */
+  animation: fadeInContent 0.4s ease-out; /* Fade-in animation for modal */
+  max-width: 90%; /* Responsive width for smaller screens */
+  width: 500px; /* Default width for larger screens */
+  color: #000; /* Black text for readability */
+  display: flex; /* Flex layout for better structure */
+  flex-direction: column; /* Stack header, body, footer */
+}
+
+/* Modal Body */
 .modal-body {
-    max-height: 80vh; /* Set a max-height if the content is too large */
-    overflow-y: auto; /* Make sure scrolling works if content overflows */
-    padding: 20px; /* Add padding to the body */
+  padding: 20px;
+  max-height: 70vh; /* Limit height for large content */
+  overflow-y: auto; /* Enable vertical scrolling for long content */
+  font-family: 'Arial', sans-serif; /* Clean, modern font */
+  font-size: 1rem; /* Standard font size */
+  color: #333; /* Darker gray for body text */
 }
 
-.modal-content {
-    min-width: 300px; /* Ensure modal has a minimum width */
+/* Modal Header */
+.modal-header {
+  padding: 15px 20px;
+  background-color: #000; /* Black header */
+  color: #fff; /* White text */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd; /* Subtle divider */
+  font-weight: bold; /* Emphasize the title */
+  font-size: 1.2rem; /* Slightly larger font for title */
 }
 
-
-.modal-dialog {
-    max-width: 600px; /* Adjust width as needed */
+/* Close Button */
+.modal-header .close,
+.modal-header .btn-close {
+  font-size: 1.5rem; /* Larger size for accessibility */
+  color: #fff; /* White color to match header */
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent black */
+.modal-header .close:hover,
+.modal-header .btn-close:hover {
+  color: #ccc; /* Light gray on hover */
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 15px 20px;
+  background-color: #000; /* Black footer */
+  color: #fff; /* White text */
+  border-top: 1px solid #ddd; /* Subtle divider */
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Add spacing between buttons */
+}
+
+/* Button Styling */
+.modal-footer .btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-footer .btn-primary {
+  background-color: #007bff; /* Blue for primary actions */
+  color: #fff;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.modal-footer .btn-secondary {
+  background-color: #6c757d; /* Gray for secondary actions */
+  color: #fff;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #565e64; /* Darker gray on hover */
+}
+
+/* Animations */
+@keyframes fadeInBackdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .modal-content {
+    margin: 0 10px; /* Add some margin for small screens */
+  }
+
+  .modal-body {
+    font-size: 0.9rem; /* Slightly smaller font for smaller screens */
+  }
 }
 
 

@@ -375,7 +375,7 @@ document.getElementById('forgotPasswordForm').addEventListener('submit', (e) => 
     })
 
     .catch((error) => {
-      alert("Error sending reset email: " + error.message);
+      showToast("Error sending reset email: " + error.message);
     });
 
 });
