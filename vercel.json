@@ -35,6 +35,10 @@
       "dest": "/bootstrap-5.3.3-dist/$1"
     },
     {
+      "src": "/favicon_io/(.*)",
+      "dest": "/favicon_io/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
